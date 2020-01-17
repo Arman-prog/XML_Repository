@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<listofstudent>
+  <student>
+    <firstname>Gagik</firstname>
+    <lastname>Poghosyan</lastname>
+    <birthdate format="DD/MM/YYYY">02/09/2000</birthdate>
+  </student>
+  <student>
+    <firstname>Ashot</firstname>
+    <lastname>Danielyan</lastname>
+    <birthdate format="DD/MM/YYYY">01/08/1999</birthdate>
+  </student>
+  <student>
+    <firstname>Vardan</firstname>
+    <lastname>Sargsyan</lastname>
+    <birthdate format="DD/MM/YYYY">08/11/1999</birthdate>
+  </student>
+  <student>
+    <firstname>Anna</firstname>
+    <lastname>Tamrazyan</lastname>
+    <birthdate format="DD/MM/YYYY">25/10/1998</birthdate>
+  </student>
+  <student>
+    <firstname>Narine</firstname>
+    <lastname>Hovhannisyan</lastname>
+    <birthdate format="DD/MM/YYYY">22/02/1998</birthdate>
+  </student>
+  <student>
+    <firstname>Arsen</firstname>
+    <lastname>Harutyunyan</lastname>
+    <birthdate format="DD/MM/YYYY">11/10/1986</birthdate>
+  </student>
+</listofstudent>
