@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using XML_Repository.Attributes;
 
 namespace XML_Repository.Models
 {
@@ -10,7 +7,11 @@ namespace XML_Repository.Models
     {
         public string FirstName { get; set; }
         public string Lastname { get; set; }
+        [Ignore]
+        public string FullName => $"{FirstName} {Lastname}";
+        [DateFormat]
         public DateTime BirthDate { get; set; }
+        
         public int Age
         {
             get

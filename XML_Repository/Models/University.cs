@@ -9,7 +9,7 @@ namespace XML_Repository.Models
    public class University
     {
         public string Name { get; set; }
-        public string Address { get; set; }
+        public string Address { get; set; }        
 
         public override string ToString()
         {

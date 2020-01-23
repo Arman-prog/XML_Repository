@@ -29,6 +29,28 @@ namespace XML_Repository
             }
         }
 
+        public void Add(TModel model)
+        {
+            var xdoc = new XmlDocument();
+            xdoc.Load(FileName);
+
+            XmlNode xnode = xdoc.ToXml(model);
+            xdoc.DocumentElement.AppendChild(xnode);
+            xdoc.Save(FileName);
+        }
+
+        public void AddRange(IEnumerable<TModel> models)
+        {
+            XmlDocument xdoc = new XmlDocument();
+            xdoc.Load(FileName);
+
+            foreach (var model in models)
+            {
+                XmlNode xnode = xdoc.ToXml(model);
+                xdoc.DocumentElement.AppendChild(xnode);
+            }
+            xdoc.Save(FileName);
+        }
         protected abstract TModel ToModel(XmlNode xnode);
         
     }
