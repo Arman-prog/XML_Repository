@@ -8,7 +8,7 @@ using XML_Repository.Models;
 
 namespace XML_Repository
 {
-   public abstract class BaseRepository<TModel>
+   public abstract class BaseRepository<TModel> where TModel:new()
     {
         public string FileName { get; }
 
@@ -25,7 +25,7 @@ namespace XML_Repository
 
             foreach (XmlNode xnode in xRoot.ChildNodes)
             {
-               yield return ToModel(xnode);
+               yield return xnode.ToModel<TModel>();
             }
         }
 
@@ -51,7 +51,7 @@ namespace XML_Repository
             }
             xdoc.Save(FileName);
         }
-        protected abstract TModel ToModel(XmlNode xnode);
+        //protected abstract TModel ToModel(XmlNode xnode);
         
     }
 }

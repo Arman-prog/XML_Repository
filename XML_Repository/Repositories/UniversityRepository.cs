@@ -15,24 +15,24 @@ namespace XML_Repository
 
         }
 
-        protected override University ToModel(XmlNode xnode)
-        {
-            University item = new University();
-            foreach (XmlNode xchild in xnode.ChildNodes)
-            {
-                switch (xchild.Name)
-                {
-                    case UniverKeywords.Name:
-                        item.Name = xchild.InnerText;
-                        break;
+        //protected override University ToModel(XmlNode xnode)
+        //{
+        //    University item = new University();
+        //    foreach (XmlNode xchild in xnode.ChildNodes)
+        //    {
+        //        switch (xchild.Name)
+        //        {
+        //            case UniverKeywords.Name:
+        //                item.Name = xchild.InnerText;
+        //                break;
 
-                    case UniverKeywords.Address:
-                        item.Address = xchild.InnerText;
-                        break;   
-                }
-            }
-            return item;
-        }
+        //            case UniverKeywords.Address:
+        //                item.Address = xchild.InnerText;
+        //                break;   
+        //        }
+        //    }
+        //    return item;
+        //}
 
 
     }

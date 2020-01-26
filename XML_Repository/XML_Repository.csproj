@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\DateFormatAttribute.cs" />
+    <Compile Include="Attributes\IdAttribute.cs" />
     <Compile Include="Attributes\IgnoreAttribute.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Models\Keywords.cs" />

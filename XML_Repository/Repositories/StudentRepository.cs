@@ -15,32 +15,32 @@ namespace XML_Repository
 
         }
 
-        protected override Student ToModel(XmlNode xnode)
-        {                    
-                Student item = new Student();
-            foreach (XmlNode xchild in xnode.ChildNodes)
-            {
-                switch (xchild.Name)
-                {
-                    case Keywords.FirstName:
-                        item.FirstName = xchild.InnerText;
-                        break;
+        //protected override Student ToModel(XmlNode xnode)
+        //{                    
+        //        Student item = new Student();
+        //    foreach (XmlNode xchild in xnode.ChildNodes)
+        //    {
+        //        switch (xchild.Name)
+        //        {
+        //            case Keywords.FirstName:
+        //                item.FirstName = xchild.InnerText;
+        //                break;
 
-                    case Keywords.LastName:
-                        item.Lastname = xchild.InnerText;
-                        break;
+        //            case Keywords.LastName:
+        //                item.Lastname = xchild.InnerText;
+        //                break;
 
-                    case Keywords.BirthDate:
-                        if (DateTime.TryParse(xchild.InnerText, out DateTime date))
-                        {
-                            item.BirthDate = DateTime.Parse(xchild.InnerText);
-                        }
-                        break;
-                }
-            }    
-                return item;
+        //            case Keywords.BirthDate:
+        //                if (DateTime.TryParse(xchild.InnerText, out DateTime date))
+        //                {
+        //                    item.BirthDate = DateTime.Parse(xchild.InnerText);
+        //                }
+        //                break;
+        //        }
+        //    }    
+        //        return item;
             
-        }
+        //}
 
     }
 }
